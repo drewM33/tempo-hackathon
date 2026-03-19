@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface: #0a0a0f;
+  --surface-2: #12121a;
+  --surface-3: #1a1a25;
+}
+
+body {
+  background: var(--surface);
+  color: #e5e7eb;
+  font-size: 14px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2a2a3a transparent;
+}
+
+/* Sparkline smooth transitions */
+.sparkline-line,
+.sparkline-area {
+  transition: d 0.5s ease;
+}
+
+.sparkline-dot {
+  transition: cx 0.5s ease, cy 0.5s ease;
+}
+
+/* KPI number flash on change */
+.kpi-flash {
+  animation: kpi-tick 0.4s ease-out;
+}
+
+@keyframes kpi-tick {
+  0% { transform: scale(1); filter: brightness(1); }
+  30% { transform: scale(1.08); filter: brightness(1.4); }
+  100% { transform: scale(1); filter: brightness(1); }
+}
+
+/* Event log entry slide-in */
+.event-slide-in {
+  animation: evt-slide 0.35s ease-out;
+}
+
+@keyframes evt-slide {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Progress bar for call state */
+.animate-progress-bar {
+  animation: progress-sweep 1.8s ease-in-out infinite;
+}
+
+@keyframes progress-sweep {
+  0%   { width: 5%; opacity: 0.6; }
+  50%  { width: 80%; opacity: 1; }
+  100% { width: 5%; opacity: 0.6; }
+}

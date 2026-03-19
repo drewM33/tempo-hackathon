@@ -1,0 +1,9 @@
+{
+  "name": "valiron",
+  "private": true,
+  "packageManager": "pnpm@9.15.4",
+  "scripts": {
+    "build": "pnpm -r run build",
+    "typecheck": "pnpm -r run typecheck"
+  }
+}
