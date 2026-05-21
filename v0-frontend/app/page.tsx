@@ -1,5 +1,5 @@
-import { Dashboard } from "@/components/dashboard/dashboard";
+import { Marketplace } from "@/components/marketplace/marketplace";
 
 export default function Page() {
-  return <Dashboard />;
+  return <Marketplace />;
 }

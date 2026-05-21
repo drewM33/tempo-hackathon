@@ -1,14 +1,15 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { ThemeProvider } from '@/lib/theme-provider'
 import './globals.css'
 
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Valiron MPP Firewall — Live Dashboard',
-  description: 'Real-time monitoring dashboard for the Valiron MPP Firewall system',
+  title: 'Valiron — Free API Trial Credits Marketplace',
+  description: 'Discover and claim free trial credits from top API providers. Agent-first. x402 & MPP native. Powered by Valiron risk scoring.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -35,9 +36,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning className="bg-background">
       <body className="font-sans antialiased">
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>

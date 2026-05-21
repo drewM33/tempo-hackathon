@@ -3,7 +3,45 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* ── Light mode (default) ── */
 :root {
+  --background: oklch(0.98 0.002 270);
+  --foreground: oklch(0.14 0.01 270);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.14 0.01 270);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.14 0.01 270);
+  --primary: oklch(0.55 0.19 155);
+  --primary-foreground: oklch(0.98 0.01 155);
+  --secondary: oklch(0.95 0.005 270);
+  --secondary-foreground: oklch(0.25 0.01 270);
+  --muted: oklch(0.94 0.005 270);
+  --muted-foreground: oklch(0.45 0.01 270);
+  --accent: oklch(0.94 0.005 270);
+  --accent-foreground: oklch(0.18 0.01 270);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.98 0.01 25);
+  --border: oklch(0.88 0.005 270);
+  --input: oklch(0.88 0.005 270);
+  --ring: oklch(0.55 0.19 155);
+  --chart-1: oklch(0.55 0.19 155);
+  --chart-2: oklch(0.55 0.15 250);
+  --chart-3: oklch(0.6 0.15 80);
+  --chart-4: oklch(0.55 0.2 25);
+  --chart-5: oklch(0.5 0.15 300);
+  --radius: 0.5rem;
+  --sidebar: oklch(0.97 0.002 270);
+  --sidebar-foreground: oklch(0.14 0.01 270);
+  --sidebar-primary: oklch(0.55 0.19 155);
+  --sidebar-primary-foreground: oklch(0.98 0.01 155);
+  --sidebar-accent: oklch(0.94 0.005 270);
+  --sidebar-accent-foreground: oklch(0.18 0.01 270);
+  --sidebar-border: oklch(0.88 0.005 270);
+  --sidebar-ring: oklch(0.55 0.19 155);
+}
+
+/* ── Dark mode ── */
+.dark {
   --background: oklch(0.08 0.01 270);
   --foreground: oklch(0.92 0.01 250);
   --card: oklch(0.12 0.01 270);
@@ -28,7 +66,6 @@
   --chart-3: oklch(0.75 0.15 80);
   --chart-4: oklch(0.65 0.2 25);
   --chart-5: oklch(0.6 0.15 300);
-  --radius: 0.5rem;
   --sidebar: oklch(0.1 0.01 270);
   --sidebar-foreground: oklch(0.92 0.01 250);
   --sidebar-primary: oklch(0.72 0.19 155);
@@ -128,21 +165,21 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Scrollbar styling for terminal aesthetic */
+/* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: oklch(0.1 0.01 270);
+  background: var(--muted);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: oklch(0.25 0.01 270);
+  background: var(--border);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: oklch(0.35 0.01 270);
+  background: var(--muted-foreground);
 }
