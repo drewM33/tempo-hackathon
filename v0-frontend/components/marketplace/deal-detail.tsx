@@ -5,11 +5,11 @@ import type { Deal } from "@/lib/marketplace-data";
 import { DEFAULT_TIER_ALLOCATION, computeAllocation } from "@/lib/marketplace-data";
 import { TIER_CONFIG, type CreditTier } from "@/lib/dashboard-data";
 import { ProtocolBadge } from "@/components/shared/protocol-badge";
+import { ProviderAvatar } from "@/components/marketplace/deal-card";
 import { AgentClaimFlow } from "@/components/claim/agent-claim-flow";
 import { ThemeToggle } from "@/components/shared/theme-toggle";
 import {
   ArrowLeft,
-  ExternalLink,
   ShieldCheck,
   Users,
   Clock,
@@ -26,13 +26,6 @@ interface DealDetailProps {
 const DISPLAY_TIERS: CreditTier[] = ["AAA", "AA", "A", "BAA", "BA", "B", "CAA", "CA"];
 
 export function DealDetail({ deal }: DealDetailProps) {
-  const initials = deal.provider.name
-    .split(" ")
-    .map((w) => w[0])
-    .slice(0, 2)
-    .join("")
-    .toUpperCase();
-
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -56,9 +49,11 @@ export function DealDetail({ deal }: DealDetailProps) {
           <div className="flex-1 min-w-0 space-y-6">
             {/* Provider header */}
             <div className="flex items-start gap-4">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-muted text-lg font-bold text-foreground">
-                {initials}
-              </div>
+              <ProviderAvatar
+                name={deal.provider.name}
+                logoUrl={deal.provider.logoUrl}
+                size="lg"
+              />
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 flex-wrap">
                   <h1 className="text-2xl font-bold text-foreground">{deal.provider.name}</h1>

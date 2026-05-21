@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import type { Deal } from "@/lib/marketplace-data";
 import { ProtocolBadge } from "@/components/shared/protocol-badge";
@@ -8,7 +11,16 @@ interface DealCardProps {
   deal: Deal;
 }
 
-function ProviderAvatar({ name }: { name: string }) {
+export function ProviderAvatar({
+  name,
+  logoUrl,
+  size = "sm",
+}: {
+  name: string;
+  logoUrl: string | null;
+  size?: "sm" | "lg";
+}) {
+  const [imgError, setImgError] = useState(false);
   const initials = name
     .split(" ")
     .map((w) => w[0])
@@ -16,8 +28,36 @@ function ProviderAvatar({ name }: { name: string }) {
     .join("")
     .toUpperCase();
 
+  const dims = size === "lg" ? "h-14 w-14" : "h-10 w-10";
+  const textSize = size === "lg" ? "text-lg" : "text-sm";
+
+  if (logoUrl && !imgError) {
+    return (
+      <div
+        className={cn(
+          "relative flex shrink-0 items-center justify-center rounded-lg border border-border bg-white overflow-hidden",
+          dims
+        )}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={logoUrl}
+          alt={`${name} logo`}
+          className="h-full w-full object-contain p-1.5"
+          onError={() => setImgError(true)}
+        />
+      </div>
+    );
+  }
+
   return (
-    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-muted text-sm font-bold text-foreground">
+    <div
+      className={cn(
+        "flex shrink-0 items-center justify-center rounded-lg bg-muted font-bold text-foreground",
+        dims,
+        textSize
+      )}
+    >
       {initials}
     </div>
   );
@@ -50,7 +90,7 @@ export function DealCard({ deal }: DealCardProps) {
 
       {/* Provider info */}
       <div className="flex items-start gap-3 mb-4">
-        <ProviderAvatar name={deal.provider.name} />
+        <ProviderAvatar name={deal.provider.name} logoUrl={deal.provider.logoUrl} />
         <div className="min-w-0 flex-1">
           <h3 className="text-sm font-semibold text-foreground truncate group-hover:text-primary transition-colors">
             {deal.provider.name}

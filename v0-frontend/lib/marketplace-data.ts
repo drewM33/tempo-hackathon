@@ -90,7 +90,7 @@ export const DEFAULT_TIER_ALLOCATION: TierAllocation = {
 export const MOCK_DEALS: Deal[] = [
   {
     id: "deal-elevenlabs",
-    provider: { name: "ElevenLabs", slug: "elevenlabs", logoUrl: null, description: "AI voice generation and text-to-speech API" },
+    provider: { name: "ElevenLabs", slug: "elevenlabs", logoUrl: "https://logo.clearbit.com/elevenlabs.io", description: "AI voice generation and text-to-speech API" },
     category: "AI & ML",
     trial: { creditAmount: 4000, creditDisplay: "12 months free (33M characters)", duration: "12 months", maxSavings: 4000 },
     endpoint: { url: "https://api.elevenlabs.io/v1/text-to-speech", protocol: "x402", method: "POST", path: "/v1/text-to-speech" },
@@ -100,7 +100,7 @@ export const MOCK_DEALS: Deal[] = [
   },
   {
     id: "deal-anthropic",
-    provider: { name: "Anthropic", slug: "anthropic", logoUrl: null, description: "Claude API for reasoning, analysis, and code generation" },
+    provider: { name: "Anthropic", slug: "anthropic", logoUrl: "https://logo.clearbit.com/anthropic.com", description: "Claude API for reasoning, analysis, and code generation" },
     category: "AI & ML",
     trial: { creditAmount: 5000, creditDisplay: "$5,000 in API credits", duration: "6 months", maxSavings: 5000 },
     endpoint: { url: "https://api.anthropic.com/v1/messages", protocol: "x402", method: "POST", path: "/v1/messages" },
@@ -110,7 +110,7 @@ export const MOCK_DEALS: Deal[] = [
   },
   {
     id: "deal-deepgram",
-    provider: { name: "Deepgram", slug: "deepgram", logoUrl: null, description: "AI speech-to-text and audio intelligence API" },
+    provider: { name: "Deepgram", slug: "deepgram", logoUrl: "https://logo.clearbit.com/deepgram.com", description: "AI speech-to-text and audio intelligence API" },
     category: "AI & ML",
     trial: { creditAmount: 2500, creditDisplay: "$2,500 in transcription credits", duration: "6 months", maxSavings: 2500 },
     endpoint: { url: "https://api.deepgram.com/v1/listen", protocol: "MPP", method: "POST", path: "/v1/listen" },
@@ -120,7 +120,7 @@ export const MOCK_DEALS: Deal[] = [
   },
   {
     id: "deal-realapi",
-    provider: { name: "RealAPI", slug: "realapi", logoUrl: null, description: "Real-time market data and financial intelligence API" },
+    provider: { name: "RealAPI", slug: "realapi", logoUrl: "https://logo.clearbit.com/realapi.io", description: "Real-time market data and financial intelligence API" },
     category: "Finance",
     trial: { creditAmount: 1000, creditDisplay: "1M free API calls", duration: "3 months", maxSavings: 1000 },
     endpoint: { url: "https://api.realapi.io/v2/market/quote", protocol: "x402", method: "GET", path: "/v2/market/quote" },
@@ -130,7 +130,7 @@ export const MOCK_DEALS: Deal[] = [
   },
   {
     id: "deal-apify",
-    provider: { name: "Apify", slug: "apify", logoUrl: null, description: "Web scraping, data extraction, and automation platform" },
+    provider: { name: "Apify", slug: "apify", logoUrl: "https://logo.clearbit.com/apify.com", description: "Web scraping, data extraction, and automation platform" },
     category: "Data",
     trial: { creditAmount: 500, creditDisplay: "$500 in platform credits", duration: "30 days", maxSavings: 500 },
     endpoint: { url: "https://api.apify.com/v2/acts", protocol: "MPP", method: "POST", path: "/v2/acts" },
@@ -140,7 +140,7 @@ export const MOCK_DEALS: Deal[] = [
   },
   {
     id: "deal-twilio",
-    provider: { name: "Twilio", slug: "twilio", logoUrl: null, description: "Communication APIs for SMS, voice, and video" },
+    provider: { name: "Twilio", slug: "twilio", logoUrl: "https://logo.clearbit.com/twilio.com", description: "Communication APIs for SMS, voice, and video" },
     category: "Communication",
     trial: { creditAmount: 1500, creditDisplay: "$1,500 in messaging credits", duration: "90 days", maxSavings: 1500 },
     endpoint: { url: "https://api.twilio.com/2010-04-01/Messages", protocol: "x402", method: "POST", path: "/2010-04-01/Messages" },
@@ -150,7 +150,7 @@ export const MOCK_DEALS: Deal[] = [
   },
   {
     id: "deal-cloudflare-ai",
-    provider: { name: "Cloudflare Workers AI", slug: "cloudflare-ai", logoUrl: null, description: "Serverless AI inference at the edge" },
+    provider: { name: "Cloudflare Workers AI", slug: "cloudflare-ai", logoUrl: "https://logo.clearbit.com/cloudflare.com", description: "Serverless AI inference at the edge" },
     category: "Infrastructure",
     trial: { creditAmount: 3000, creditDisplay: "10M inference tokens free", duration: "6 months", maxSavings: 3000 },
     endpoint: { url: "https://api.cloudflare.com/client/v4/ai/run", protocol: "x402", method: "POST", path: "/client/v4/ai/run" },
@@ -160,7 +160,7 @@ export const MOCK_DEALS: Deal[] = [
   },
   {
     id: "deal-resend",
-    provider: { name: "Resend", slug: "resend", logoUrl: null, description: "Email API for developers with React templates" },
+    provider: { name: "Resend", slug: "resend", logoUrl: "https://logo.clearbit.com/resend.com", description: "Email API for developers with React templates" },
     category: "Communication",
     trial: { creditAmount: 200, creditDisplay: "10,000 free emails/month", duration: "6 months", maxSavings: 200 },
     endpoint: { url: "https://api.resend.com/emails", protocol: "MPP", method: "POST", path: "/emails" },
@@ -170,7 +170,7 @@ export const MOCK_DEALS: Deal[] = [
   },
   {
     id: "deal-neon",
-    provider: { name: "Neon", slug: "neon", logoUrl: null, description: "Serverless Postgres with branching and auto-scaling" },
+    provider: { name: "Neon", slug: "neon", logoUrl: "https://logo.clearbit.com/neon.tech", description: "Serverless Postgres with branching and auto-scaling" },
     category: "Storage",
     trial: { creditAmount: 800, creditDisplay: "$800 in compute credits", duration: "3 months", maxSavings: 800 },
     endpoint: { url: "https://console.neon.tech/api/v2/projects", protocol: "x402", method: "POST", path: "/api/v2/projects" },
@@ -180,7 +180,7 @@ export const MOCK_DEALS: Deal[] = [
   },
   {
     id: "deal-posthog",
-    provider: { name: "PostHog", slug: "posthog", logoUrl: null, description: "Product analytics, session replay, and feature flags" },
+    provider: { name: "PostHog", slug: "posthog", logoUrl: "https://logo.clearbit.com/posthog.com", description: "Product analytics, session replay, and feature flags" },
     category: "Analytics",
     trial: { creditAmount: 1200, creditDisplay: "1M free events/month", duration: "12 months", maxSavings: 1200 },
     endpoint: { url: "https://app.posthog.com/api/event", protocol: "MPP", method: "POST", path: "/api/event" },
@@ -190,7 +190,7 @@ export const MOCK_DEALS: Deal[] = [
   },
   {
     id: "deal-mistral",
-    provider: { name: "Mistral AI", slug: "mistral", logoUrl: null, description: "Open-weight LLMs with best-in-class efficiency" },
+    provider: { name: "Mistral AI", slug: "mistral", logoUrl: "https://logo.clearbit.com/mistral.ai", description: "Open-weight LLMs with best-in-class efficiency" },
     category: "AI & ML",
     trial: { creditAmount: 2000, creditDisplay: "$2,000 in inference credits", duration: "3 months", maxSavings: 2000 },
     endpoint: { url: "https://api.mistral.ai/v1/chat/completions", protocol: "x402", method: "POST", path: "/v1/chat/completions" },
@@ -200,7 +200,7 @@ export const MOCK_DEALS: Deal[] = [
   },
   {
     id: "deal-upstash",
-    provider: { name: "Upstash", slug: "upstash", logoUrl: null, description: "Serverless Redis and Kafka for modern applications" },
+    provider: { name: "Upstash", slug: "upstash", logoUrl: "https://logo.clearbit.com/upstash.com", description: "Serverless Redis and Kafka for modern applications" },
     category: "Infrastructure",
     trial: { creditAmount: 600, creditDisplay: "10K commands/day free", duration: "6 months", maxSavings: 600 },
     endpoint: { url: "https://api.upstash.com/v2/redis", protocol: "MPP", method: "POST", path: "/v2/redis" },
@@ -210,7 +210,7 @@ export const MOCK_DEALS: Deal[] = [
   },
   {
     id: "deal-serper",
-    provider: { name: "Serper", slug: "serper", logoUrl: null, description: "Google Search API for AI agents and applications" },
+    provider: { name: "Serper", slug: "serper", logoUrl: "https://logo.clearbit.com/serper.dev", description: "Google Search API for AI agents and applications" },
     category: "Data",
     trial: { creditAmount: 300, creditDisplay: "2,500 free searches", duration: "30 days", maxSavings: 300 },
     endpoint: { url: "https://google.serper.dev/search", protocol: "x402", method: "POST", path: "/search" },
@@ -220,7 +220,7 @@ export const MOCK_DEALS: Deal[] = [
   },
   {
     id: "deal-replicate",
-    provider: { name: "Replicate", slug: "replicate", logoUrl: null, description: "Run open-source ML models in the cloud" },
+    provider: { name: "Replicate", slug: "replicate", logoUrl: "https://logo.clearbit.com/replicate.com", description: "Run open-source ML models in the cloud" },
     category: "AI & ML",
     trial: { creditAmount: 1500, creditDisplay: "$1,500 in GPU credits", duration: "3 months", maxSavings: 1500 },
     endpoint: { url: "https://api.replicate.com/v1/predictions", protocol: "x402", method: "POST", path: "/v1/predictions" },
@@ -230,7 +230,7 @@ export const MOCK_DEALS: Deal[] = [
   },
   {
     id: "deal-browserbase",
-    provider: { name: "Browserbase", slug: "browserbase", logoUrl: null, description: "Headless browser infrastructure for AI agents" },
+    provider: { name: "Browserbase", slug: "browserbase", logoUrl: "https://logo.clearbit.com/browserbase.com", description: "Headless browser infrastructure for AI agents" },
     category: "Developer Tools",
     trial: { creditAmount: 750, creditDisplay: "1,000 browser sessions free", duration: "60 days", maxSavings: 750 },
     endpoint: { url: "https://api.browserbase.com/v1/sessions", protocol: "MPP", method: "POST", path: "/v1/sessions" },
@@ -240,7 +240,7 @@ export const MOCK_DEALS: Deal[] = [
   },
   {
     id: "deal-e2b",
-    provider: { name: "E2B", slug: "e2b", logoUrl: null, description: "Sandboxed code execution environments for AI" },
+    provider: { name: "E2B", slug: "e2b", logoUrl: "https://logo.clearbit.com/e2b.dev", description: "Sandboxed code execution environments for AI" },
     category: "Developer Tools",
     trial: { creditAmount: 400, creditDisplay: "100 sandbox hours free", duration: "30 days", maxSavings: 400 },
     endpoint: { url: "https://api.e2b.dev/v1/sandboxes", protocol: "x402", method: "POST", path: "/v1/sandboxes" },
@@ -250,7 +250,7 @@ export const MOCK_DEALS: Deal[] = [
   },
   {
     id: "deal-firecrawl",
-    provider: { name: "Firecrawl", slug: "firecrawl", logoUrl: null, description: "Web scraping API that returns clean markdown" },
+    provider: { name: "Firecrawl", slug: "firecrawl", logoUrl: "https://logo.clearbit.com/firecrawl.dev", description: "Web scraping API that returns clean markdown" },
     category: "Data",
     trial: { creditAmount: 350, creditDisplay: "5,000 free page crawls", duration: "30 days", maxSavings: 350 },
     endpoint: { url: "https://api.firecrawl.dev/v1/scrape", protocol: "MPP", method: "POST", path: "/v1/scrape" },
@@ -260,7 +260,7 @@ export const MOCK_DEALS: Deal[] = [
   },
   {
     id: "deal-sentry",
-    provider: { name: "Sentry", slug: "sentry", logoUrl: null, description: "Application monitoring and error tracking" },
+    provider: { name: "Sentry", slug: "sentry", logoUrl: "https://logo.clearbit.com/sentry.io", description: "Application monitoring and error tracking" },
     category: "Developer Tools",
     trial: { creditAmount: 900, creditDisplay: "500K events/month free", duration: "6 months", maxSavings: 900 },
     endpoint: { url: "https://sentry.io/api/0/projects", protocol: "MPP", method: "POST", path: "/api/0/projects" },
@@ -270,7 +270,7 @@ export const MOCK_DEALS: Deal[] = [
   },
   {
     id: "deal-pinecone",
-    provider: { name: "Pinecone", slug: "pinecone", logoUrl: null, description: "Vector database for similarity search and RAG" },
+    provider: { name: "Pinecone", slug: "pinecone", logoUrl: "https://logo.clearbit.com/pinecone.io", description: "Vector database for similarity search and RAG" },
     category: "Storage",
     trial: { creditAmount: 1100, creditDisplay: "5M vectors free storage", duration: "3 months", maxSavings: 1100 },
     endpoint: { url: "https://api.pinecone.io/vectors/upsert", protocol: "x402", method: "POST", path: "/vectors/upsert" },
@@ -280,7 +280,7 @@ export const MOCK_DEALS: Deal[] = [
   },
   {
     id: "deal-cohere",
-    provider: { name: "Cohere", slug: "cohere", logoUrl: null, description: "Enterprise LLMs for search, summarization, and RAG" },
+    provider: { name: "Cohere", slug: "cohere", logoUrl: "https://logo.clearbit.com/cohere.com", description: "Enterprise LLMs for search, summarization, and RAG" },
     category: "AI & ML",
     trial: { creditAmount: 1800, creditDisplay: "$1,800 in API credits", duration: "3 months", maxSavings: 1800 },
     endpoint: { url: "https://api.cohere.ai/v1/chat", protocol: "x402", method: "POST", path: "/v1/chat" },
